@@ -168,7 +168,7 @@ export function RegisterPage(){
                     </div>
                         <p className={passwordIsValid ? "valid" : "invalid"}>Please enter longer password</p>
                     <div className="buttons">
-                        <button type="button" className="button-submit" >Register</button>
+                        <button type="submit" className="button-submit" >Register</button>
                         <button type="reset" onClick={resetForm} className='button-reset'>Reset</button>
 
                     </div>
