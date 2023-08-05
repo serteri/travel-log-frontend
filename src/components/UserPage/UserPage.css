@@ -1,0 +1,129 @@
+body { background-color: red; }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.location{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.location-title{
+    color: darkorange;
+    margin-left: 2rem;
+    margin-top: 2rem;
+
+}
+
+.location-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* adjust as needed */
+    margin: 0 auto;
+}
+
+.location-card{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.name{
+    color: coral;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: larger;
+}
+.logout{
+    margin-left: 2rem;
+}
+
+.new-experience{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.new-experience-title{
+    color: darkorange;
+}
+
+.button_create{
+    background-color: azure ;
+    border-radius: 6px;
+    width: 5rem;
+
+}
+.button_create:hover{
+    background-color: darkorange;
+}
+
+.button{
+    margin-right: 2rem;
+    background-color: azure;
+}
+
+@media (max-width: 428px) {
+
+    .location{
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .location-title{
+        color: darkorange;
+    }
+    .location-card{
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .button_create{
+        background-color: antiquewhite;
+        border-radius: 6px;
+        width: 5rem;
+
+    }
+    .button_create:hover{
+        background-color: darkorange;
+    }
+
+}
+
+@media (min-width: 429px) and (max-width:820px){
+    .location{
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .location-title{
+        color: darkorange;
+
+    }
+    .location-card{
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    .button_create{
+        background-color: antiquewhite;
+        border-radius: 6px;
+        width: 5rem;
+
+    }
+    .button_create:hover{
+        background-color: darkorange;
+    }
+}

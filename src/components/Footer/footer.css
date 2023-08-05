@@ -1,0 +1,34 @@
+
+
+
+
+
+.date{
+    display: inline-block;
+}
+.date1{
+    display: inline-block;
+    margin-right: .5rem
+}
+
+@media (max-width: 428px){
+
+    .footer{
+        height: 1.3rem;
+        text-align: center;
+    }
+    .date{
+        display: inline-block;
+        font-size:.6rem;
+        text-align: center;
+    }
+    .date1{
+        display: inline-block;
+        margin-right: .5rem;
+        font-size:.8rem;
+        text-align: center;
+    }
+
+
+
+}

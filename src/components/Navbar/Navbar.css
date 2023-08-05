@@ -1,0 +1,117 @@
+nav{
+    height: 3rem;
+    margin-top:.3rem
+}
+.navbars{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-brands{
+    text-decoration: none;
+    color: darkorange;
+    font-size:2rem;
+    margin-left: 2rem;
+}
+
+.navbar_list{
+    list-style: none;
+}
+
+.navbar_list_items{
+    display: flex;
+
+}
+
+.nav-items{
+    font-size: 1rem;
+    margin-right: 3rem;
+}
+
+.actives{
+    color: coral;
+    text-decoration: underline;
+}
+.nav_search{
+    height: 1rem;
+    width:5rem;
+}
+.nav_search::placeholder{font-size: .9rem;color: darkorange}
+
+
+@media (max-width: 428px){
+    nav{
+        height: 1rem;
+    }
+    .navbars{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar-brands{
+        text-decoration: none;
+        color: darkorange;
+        font-size: .9rem;
+    }
+
+    .navbar_list{
+        list-style: none;
+    }
+
+    .navbar_list_items{
+        display: flex;
+
+    }
+
+    .nav-items{
+        font-size: .4rem;
+        margin-right: 1rem;
+    }
+
+    .nav_search{
+        height: .5rem;
+        width:1.9rem;
+    }
+    .nav_search::placeholder{font-size: .3rem}
+
+
+}
+
+@media (min-width: 429px) and (max-width:820px) {
+
+nav{
+    height: 3rem;
+    margin-top:.5rem
+}
+.navbars{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-brands{
+    text-decoration: none;
+    color: darkorange;
+    font-size: 1.2rem;
+    margin-left:.5rem
+}
+
+.navbar_list{
+    list-style: none;
+}
+
+.navbar_list_items{
+    display: flex;
+
+}
+
+.nav-items{
+    font-size: 1rem;
+    margin-right: 3rem;
+}
+
+.nav_search{
+    height: 1rem;
+    width:4rem;
+}
+.nav_search::placeholder{font-size: .7rem;color: darkorange}
+
+
+}
+
