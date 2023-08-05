@@ -4,7 +4,7 @@ import './PostTravel.css';
 import axios from 'axios';
 
 export function PostTravel() {
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
+    const backendUrl = 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
     let { id } = useParams();
     const navigate = useNavigate();
 
@@ -82,7 +82,7 @@ export function PostTravel() {
 <>
     <section className='posting'>
 
-        <form className="login-form" onSubmit={submitPost} action='https://trevel-logapp-0ef19dc2f4ae.herokuapp.com/userid/post' >
+        <form className="login-form" onSubmit={submitPost} >
             <h1 className='title'>Create  Post</h1>
             <div className="form_elements">
                 <i className="fa-solid fa-location-dot icons"></i>
