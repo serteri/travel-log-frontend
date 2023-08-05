@@ -8,7 +8,7 @@ import {About} from './components/About/AboutUs';
 import {RegisterPage} from './components/Register/Register';
 import "./App.css"
 import {UserPage} from './components/UserPage/UserPage';
-import RootLayout from "./Root";
+
 import Error from "./components/Error/Error";
 import {PostTravel} from "./components/PostTravel/PostTravel";
 
@@ -18,13 +18,6 @@ import {PostTravel} from "./components/PostTravel/PostTravel";
 function App() {
 
 
-    const [isSignedIn, setIsSignedIn] = useState(null)
-    const signin = () => {
-        setIsSignedIn(true)
-    }
-    const signout = () => {
-        setIsSignedIn(false)
-    }
     return (
 
             // <RouterProvider router={router}/>

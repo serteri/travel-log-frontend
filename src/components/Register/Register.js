@@ -20,7 +20,7 @@ export function RegisterPage(){
     const[error,setError]= useState('')
     const[message,setMessage]= useState('')
     const [formIsValid, setFormIsValid] = useState(false);
-    const[formSubmit,setFormSubmit]= useState(false)
+    const[formSubmit,setFormSubmit]= useState(true)
 
     const navigate = useNavigate();
 
