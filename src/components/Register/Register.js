@@ -128,7 +128,7 @@ export function RegisterPage(){
 
         <div className="form-element">
 
-                <form action='https://trevel-logapp-0ef19dc2f4ae.herokuapp.com/register-us' className="login-form" onSubmit={registerForm}>
+                <form  className="login-form" onSubmit={registerForm}>
 
                     <fieldset name="Register">
                         <legend className='register'>Register</legend>

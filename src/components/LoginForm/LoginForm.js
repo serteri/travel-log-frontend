@@ -5,7 +5,7 @@ import './LoginForm.css'
 
 
 export function LoginForm (props){
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
+    const backendUrl = 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
 
     const navigate = useNavigate();
     const navigateToRegister = ()=>{
