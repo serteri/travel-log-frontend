@@ -69,7 +69,7 @@ const submitForm = async (e) => {
             password: password,
         };
 
-        const response = await axios.post(`${backendUrl}/log-in`, postData).then(response => {let firstName=response.data.firstName; 
+        await axios.post(`${backendUrl}/log-in`, postData).then(response => {let firstName=response.data.firstName; 
             let id =response.data.id ;localStorage.setItem('authenticated', true);
         localStorage.setItem('name', firstName);
         localStorage.setItem('id', id);setEnteredEmail('');
@@ -100,7 +100,7 @@ const resetForm = () => {
                     <input id='password' className="inputs1" type="password" name="password" value={password} onChange={passwordChangeHAndler} placeholder='password' required/>
                 </div>
                 <div className="buttons1">
-                    <button type="button" className="button-submit1">Log In</button>
+                    <button type="submit" className="button-submit1">Log In</button>
                     <button type="reset" onClick={resetForm} className='button-reset1'>Reset</button>
                     <button onClick={navigateToRegister} className='button-register1'>Register</button>
 
