@@ -15,7 +15,7 @@ export function LoginForm (props){
     }
     const navigateToUser = (id)=>{
         //navigate to /register
-        navigate(`/user/:${id}`);
+        navigate(`/author/:${id}`);
 
     }
     const [email,setEnteredEmail]= useState('')
