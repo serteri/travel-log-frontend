@@ -13,14 +13,14 @@ import '../PostCards/PostCard.css';
 export function UserPage() {
     const navigate = useNavigate();
 
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
+    const backendUrl = 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
 
     const [authenticated, setAuthenticated] = useState(null);
     const[name,setName] = useState('')
     const [posts, setPosts] = useState([]);
     const username = localStorage.getItem('name').charAt(0).toUpperCase() + localStorage.getItem('name').slice(1);
     const id = localStorage.getItem('id');
-    console.log(id)
+  
     useEffect(() => {
         const fetchData = async () => {
             if (!id) {
@@ -32,6 +32,7 @@ export function UserPage() {
             try {
                 const id = localStorage.getItem('id'); // Make sure the ID is correct
                 const response = await axios.get(`${backendUrl}/posts/${id}`);
+                console.log(response.data.postsArray)
                 setPosts(response.data.postsArray);
             } catch (error) {
                 console.error('Error retrieving posts:', error);
