@@ -33,8 +33,8 @@ export function UserPage() {
             }
 
             try {
-                const userID = '64c910876155802ac68f6e37';
-                await axios.get(`${backendUrl}/posts/${userID}`).then(response => {console.log(response.data.postsArray)
+                
+                await axios.get(`${backendUrl}/posts/${id}`).then(response => {console.log(response.data.postsArray)
                     setPosts(response.data.postsArray);});
                 
             } catch (error) {
