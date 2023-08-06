@@ -14,7 +14,7 @@ export function LoginForm (props){
 
     }
     const navigateToUser = (id)=>{
-        //navigate to /register
+        //navigate to /user
         navigate(`/posts/:${id}`);
 
     }
@@ -69,7 +69,7 @@ const submitForm = async (e) => {
             password: password,
         };
 
-        await axios.post(`${backendUrl}/log-in`, postData).then(response => {let firstName=response.data.firstName; 
+        await axios.post(`${backendUrl}/log-in`, postData).then(response => {let firstName=response.data.firstName; console.log(firstName);
             let id =response.data.id ;localStorage.setItem('authenticated', true);
         localStorage.setItem('name', firstName);
         localStorage.setItem('id', id);setEnteredEmail('');
