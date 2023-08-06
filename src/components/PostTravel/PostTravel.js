@@ -100,7 +100,7 @@ export function PostTravel() {
             <div className="form_elements">
                 <textarea   placeholder='Post something' name='post' rows="4" cols="50" onChange={postHandler} value={post} />
             </div>
-            <button className='button-submit' >Post It</button>
+            <button type='submit' className='button-submit' >Post It</button>
         </form>
 
     </section>
