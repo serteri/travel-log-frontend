@@ -23,7 +23,8 @@ export function UserPage() {
   
     useEffect(() => {
         const fetchData = async () => {
-            const id = localStorage.getItem('id'); // Set the ID before making the API call
+            const id = localStorage.getItem('id'); 
+            console.log(id)// Set the ID before making the API call
             if (!id) {
                 // Redirect to login page if user is not logged in
                 navigate('/login');
@@ -31,7 +32,7 @@ export function UserPage() {
             }
 
             try {
-                await axios.get(`${backendUrl}/posts/:${id}`).then(response => {console.log(response.data.postsArray)
+                await axios.get(`${backendUrl}/posts/${id}`).then(response => {console.log(response.data.postsArray)
                     setPosts(response.data.postsArray);});
                 
             } catch (error) {
