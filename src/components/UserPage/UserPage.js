@@ -23,6 +23,7 @@ export function UserPage() {
   
     useEffect(() => {
         const fetchData = async () => {
+            const id = localStorage.getItem('id'); // Set the ID before making the API call
             if (!id) {
                 // Redirect to login page if user is not logged in
                 navigate('/login');
