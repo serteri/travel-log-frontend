@@ -32,7 +32,7 @@ export function UserPage() {
             }
 
             try {
-                await axios.get(`${backendUrl}/posts/${id}`).then(response => {console.log(response.data.postsArray)
+                await axios.get(`${backendUrl}/posts/:${id}`).then(response => {console.log(response.data.postsArray)
                     setPosts(response.data.postsArray);});
                 
             } catch (error) {
