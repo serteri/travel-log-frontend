@@ -29,7 +29,7 @@ function App() {
                     <Route path="/login" element={<LoginForm />}/>
                     <Route path="/about" element={<About />}/>
                     <Route path="/register" element={<RegisterPage />}/>
-                    <Route path="/author/:id" element ={<UserPage />}/>
+                    <Route path="/posts/:userID" element ={<UserPage />}/>
                     <Route path="/user/:id/newPost" element ={<PostTravel />}/>
 
                     <Route path='*' element={<Error />}/>

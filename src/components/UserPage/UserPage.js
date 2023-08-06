@@ -31,7 +31,7 @@ export function UserPage() {
 
             try {
                 const id = localStorage.getItem('id'); // Make sure the ID is correct
-                const response = await axios.get(`${backendUrl}/author/${id}`);
+                const response = await axios.get(`${backendUrl}/posts/${id}`);
                 console.log(response.data.postsArray)
                 setPosts(response.data.postsArray);
             } catch (error) {
