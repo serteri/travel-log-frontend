@@ -71,7 +71,7 @@ export function UserPage() {
             <p className='name'>Welcome {username}</p>
             <button className='btn btn-secondary btn-outline-warning btn-lg logout' onClick={handleLogout} >Log out</button>
             <div className="posts-container">
-                {posts.length >0 ? <h1 className='location-title'> My Travel Experience</h1> : <p>Merhabalar</p> }
+                {posts.length >0 ? <h1 className='location-title'> My Travel Experience</h1> : <></> }
                 {posts &&
                     posts.slice(0,2).map((post) => (
                         <PostCard key={post._id} post={post} />
