@@ -25,6 +25,7 @@ export function UserPage() {
         const fetchData = async () => {
             const id = localStorage.getItem('id'); 
             console.log(id)// Set the ID before making the API call
+            console.log(`${backendUrl}/posts/${id}`);
             if (!id) {
                 // Redirect to login page if user is not logged in
                 navigate('/login');
@@ -32,7 +33,8 @@ export function UserPage() {
             }
 
             try {
-                await axios.get(`${backendUrl}/posts/:${id}`).then(response => {console.log(response.data.postsArray)
+                const userID = '64c910876155802ac68f6e37';
+                await axios.get(`${backendUrl}/posts/${userID}`).then(response => {console.log(response.data.postsArray)
                     setPosts(response.data.postsArray);});
                 
             } catch (error) {
