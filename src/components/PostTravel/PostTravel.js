@@ -14,7 +14,7 @@ export function PostTravel() {
     };
     const navigateToUser = (m)=>{
 
-        navigate(`/user/:${m}`);
+        navigate(`/posts/:${m}`);
 
     }
     const [location, setLocation] = useState('');
