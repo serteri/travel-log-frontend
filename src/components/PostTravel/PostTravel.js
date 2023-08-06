@@ -6,6 +6,7 @@ import axios from 'axios';
 export function PostTravel() {
     const backendUrl = 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
     let { id } = useParams();
+    console.log(id)
     const navigate = useNavigate();
 
     const navigateToNewPost = () => {
@@ -49,7 +50,7 @@ export function PostTravel() {
         const day = d.getDate().toString().padStart(2, '0');
         const month = (d.getMonth() + 1).toString().padStart(2, '0');
         const year = d.getFullYear();
-        return `${day}/${month}/${year}`;
+        return `${year}/${month}/${day}`;
     };
     const postData = async () => {
         const postData = {
