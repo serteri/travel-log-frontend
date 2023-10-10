@@ -107,8 +107,8 @@ export function RegisterPage(){
             password:password,
             address:address
         }
-        await axios.post(`${backendUrl}/register-us`,postData).then(
-            response => {setMessage('Successfully Registered!');setFormSubmit(true) ;navigateToLogin()}).catch(error=>{setError('Some error occurred')})
+        await axios.post(`http://localhost:9000/register-us`,postData).then(
+            response => {setMessage('Successfully Registered!');setFormSubmit(true) ;navigateToLogin()}).catch(error=>console.log(error))
 
     }
 

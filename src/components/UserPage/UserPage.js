@@ -24,8 +24,7 @@ export function UserPage() {
     useEffect(() => {
         const fetchData = async () => {
             const id = localStorage.getItem('id'); 
-            console.log(id)// Set the ID before making the API call
-            console.log(`${backendUrl}/posts/${id}`);
+
             if (!id) {
                 // Redirect to login page if user is not logged in
                 navigate('/login');
@@ -34,7 +33,7 @@ export function UserPage() {
 
             try {
                 
-                await axios.get(`${backendUrl}/posts/${id}`).then(response => {console.log(response.data.postsArray)
+                await axios.get(`http://localhost:9000/posts/${id}`).then(response => {
                     setPosts(response.data.postsArray);});
                 
             } catch (error) {
@@ -43,7 +42,7 @@ export function UserPage() {
         };
 
         fetchData();
-    }, [id, navigate,posts]);
+    }, [id, navigate]);
 
     useEffect(() => {
         const loggedInUser = localStorage.getItem('authenticated');
@@ -74,7 +73,7 @@ export function UserPage() {
                 {posts.length >0 ? <h1 className='location-title'> My Travel Experience</h1> : <></> }
                 {posts &&
                     posts.slice(0,2).map((post) => (
-                        <PostCard key={post._id} post={post} />
+                        <PostCard key={post.id} post={post}  />
                     ))}
             </div>
             <div className="new-experience">

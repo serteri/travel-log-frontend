@@ -5,7 +5,7 @@ import './LoginForm.css'
 
 
 export function LoginForm (props){
-    const backendUrl = 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
+    const backendUrl = 4000;
 
     const navigate = useNavigate();
     const navigateToRegister = ()=>{
@@ -32,7 +32,7 @@ export function LoginForm (props){
        },500)
         return () => {clearTimeout(identifier)}
 
-    },[email,password,isLoggedIn]
+    },[email,password,isLoggedIn,formIsValid]
     )
     const emailChangeHandler= (e) => {
         setEnteredEmail(e.target.value)
@@ -69,7 +69,8 @@ const submitForm = async (e) => {
             password: password,
         };
 
-        await axios.post(`${backendUrl}/log-in`, postData).then(response => {let firstName=response.data.firstName; console.log(firstName);
+        await axios.post(`http://localhost:9000/log-in`, postData ,{
+        }).then(response => {let firstName=response.data.firstName;
             let id =response.data.id ;localStorage.setItem('authenticated', true);
         localStorage.setItem('name', firstName);
         localStorage.setItem('id', id);setEnteredEmail('');

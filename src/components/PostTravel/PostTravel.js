@@ -5,8 +5,9 @@ import axios from 'axios';
 
 export function PostTravel() {
     const backendUrl = 'https://trevel-logapp-0ef19dc2f4ae.herokuapp.com';
-    let { id } = useParams();
-    console.log(id)
+    let id  = localStorage.getItem('id');
+
+
     const navigate = useNavigate();
 
     const navigateToNewPost = () => {
@@ -62,7 +63,7 @@ export function PostTravel() {
         };
 
         try {
-            await axios.post(`${backendUrl}/user/${id}/post`, postData).then( response => navigateToUser(id));
+            await axios.post(`http://localhost:9000/user/${id}/post`, postData).then( response => navigateToUser(id));
         } catch (error) {
             setError('Some error occurred');
         }
@@ -80,7 +81,7 @@ export function PostTravel() {
 
 
     return(
-<>
+
     <section className='posting'>
 
         <form className="login-form" onSubmit={submitPost} >
@@ -107,7 +108,7 @@ export function PostTravel() {
     </section>
 
 
-</>
+
 )
 
 }

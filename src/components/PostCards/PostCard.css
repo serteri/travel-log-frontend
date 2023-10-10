@@ -6,7 +6,7 @@
     background-color: #f9f9f9;
     border-radius: 5px;
     width: 60%;
-    height: 10rem;
+    height: 12rem;
 }
 
 .post-card h2 {
@@ -17,6 +17,13 @@
 .post-card p {
     font-size: 14px;
     color: #888;
+
+}
+.button{
+    color: bisque;
+    background-color: coral;
+    border-radius: 6px;
+    width: 5rem;
 
 }
 
